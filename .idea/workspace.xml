@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d284d77-ff7b-43ab-b986-cd44b06fae25" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3.2/3.2-1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3.2/3.2-2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5.1/5.1.py" />
-      <change type="DELETED" beforePath="E:\project\nowcoder\readme.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.1/2.1.py" afterPath="$PROJECT_DIR$/2.1/2.1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="E:\project\nowcoder\6.1\6.1.py" afterPath="$PROJECT_DIR$/4.2/4.2.py" />
-    </list>
+    <list default="true" id="9d284d77-ff7b-43ab-b986-cd44b06fae25" name="Default" comment="" />
     <ignored path="nowcoder.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -102,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="4.3.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="4.3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/4.3/4.3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.2992278">
               <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding />
             </state>
@@ -135,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="5.1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="5.1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5.1/5.1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5096525">
+            <state vertical-scroll-proportion="0.0">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#39#80#0" expanded="true" />
@@ -913,11 +905,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4.3/4.3.py">
+    <entry file="file://$PROJECT_DIR$/5.1/5.1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#80#0" expanded="true" />
+            <marker date="1596879260620" expanded="true" signature="1355:1412" placeholder="SELECT * FRO..users..." />
+            <marker date="1596879260620" expanded="true" signature="1994:2024" placeholder="SELECT * FRO..news..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -932,15 +928,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.1/5.1.py">
+    <entry file="file://$PROJECT_DIR$/4.3/4.3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5096525">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#80#0" expanded="true" />
-            <marker date="1596879260620" expanded="true" signature="1355:1412" placeholder="SELECT * FRO..users..." />
-            <marker date="1596879260620" expanded="true" signature="1994:2024" placeholder="SELECT * FRO..news..." />
-          </folding>
+        <state vertical-scroll-proportion="0.2992278">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
