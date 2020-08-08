@@ -1,22 +1,18 @@
 #coding:utf-8
 __author__ = 'Mr. null'
 
-'''
-将登录获取token逻辑与开关门逻辑分开
-'''
 from flask import Flask, request, jsonify
 from flask_httpauth import HTTPTokenAuth
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 import json
-import  MySQLdb
+import pymysql.connections as db_connection
 
 app = Flask(__name__)
 app.config["JSON_AS_ASCII"] = False
 app.config['SECRET_KEY']='nowcoder'
 auth = HTTPTokenAuth()
 
-_db = MySQLdb.connect(host="localhost",user="root",passwd="root123",db="apitest",charset="utf8")
-_cursor = None
+
 
 def create_token(username,password):
     """创建token"""
@@ -42,25 +38,26 @@ def verify_token(token):
 @app.route('/login',methods= ["POST"])
 def login():
     """登录验证用户名密码正确性，如正确返回token"""
+    _db = db_connection.Connection(host="localhost",user="root",passwd="root123",db="apitest",charset="utf8")
     j_data = json.loads(request.get_data())
+    print(j_data)
     try:
-        inp_name = j_data['username']
-        inp_password = j_data['password']
+        username = j_data['username']
+        password = j_data['password']
     except:
         return jsonify(code=1001,msg="参数缺失")
 
-    #sql = "SELECT * FROM users WHERE name = '%s' AND password = '%s'"%(inp_name, inp_password)
-    sql = "SELECT * FROM users WHERE name = '%s' AND password = '%s'"%(inp_name, inp_password)
+    sql = "SELECT * FROM users WHERE name = '%s' AND password = '%s'"%(username, password)
     print(sql)
     cursor = _db.cursor()
     rows = cursor.execute(sql)
 
     if rows:
-        token = create_token(inp_name,inp_password)
-        return jsonify(code=4,msg="登录成功",token=token.decode())
+        token = create_token(username,password)
+        return jsonify(code=4,msg="登录成功，欢迎您！",token=token.decode())
     else:
         return jsonify(code=2,msg="非法用户")
-    _cursor.close()
+    cursor.close()
 
 @app.route('/door',methods= ["GET"])
 @auth.login_required
