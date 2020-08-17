@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "be7a8e40-c763-4293-a8fa-e69e5ce77ff3",
+		"name": "AutoTest_nowcoder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "4.2 case1：有效用户登录_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff8e139a-050a-4b20-985e-67fa83b503eb",
+						"exec": [
+							"pm.test(\"验证code值为4\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(4);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为登录成功\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"登录成功，欢迎您！\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证包含token\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+							"});\r",
+							"\r",
+							"//保存响应结果json\r",
+							"var jsonData = pm.response.json();\r",
+							"//获取token值并赋予全局变量nk_token\r",
+							"pm.globals.set(\"nk_token\",jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d07b6422-9bc1-4c59-b801-b35a5318bac9",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a123456\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case2：不存在的用户名_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "686eb303-ee8f-4dd9-aa9f-06426c8c75f8",
+						"exec": [
+							"pm.test(\"验证code值为2\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为非法用户\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"非法用户\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b2e3c6de-ee05-4f52-bc4f-decb7885d658",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"a123456789\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null1\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case3：用户名正确密码错误_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "686eb303-ee8f-4dd9-aa9f-06426c8c75f8",
+						"exec": [
+							"pm.test(\"验证code值为2\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为非法用户\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"非法用户\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b74651ee-3be7-42e3-bb81-c8329af1f94b",
+						"exec": [
+							"// 定义password值\r",
+							"password = \"b123456\"\r",
+							"\r",
+							"//字符串进行md5加密\r",
+							"var strmd5= CryptoJS.MD5(password).toString();\r",
+							"postman.setGlobalVariable(\"password\",strmd5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case4：参数缺失：少username_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff8e139a-050a-4b20-985e-67fa83b503eb",
+						"exec": [
+							"pm.test(\"验证code值为1001\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(1001);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为：参数缺失少username\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"参数缺失\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case5：参数缺失：少password_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff8e139a-050a-4b20-985e-67fa83b503eb",
+						"exec": [
+							"pm.test(\"验证code值为1001\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(1001);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为：参数缺失少password\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"参数缺失\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"Mr.null\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:5000/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case6：正常开门_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2290a24b-b96b-47d7-a912-fddc5cad74fd",
+						"exec": [
+							"pm.test(\"验证code值为0\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为：开门\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"开门\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{nk_token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " {{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}:5000/door?p=open",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case7：正常关门_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5a9395e6-fe72-438f-b046-4514e4cbb7f4",
+						"exec": [
+							"pm.test(\"验证code值为1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为：关门\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"关门\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": " {{nk_token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:5000/door?p=close",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "close"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case8：p参数缺失_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "075a2d6f-989e-4c33-a037-a7ca9a328846",
+						"exec": [
+							"pm.test(\"验证code值为1001\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(1001);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为：p参数缺失\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"p参数缺失\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": " {{nk_token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " {{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}:5000/door",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "open",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 case9：p参数值错误_script4.2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b6bfbd98-47c3-46b5-b18d-71c2ac34008d",
+						"exec": [
+							"pm.test(\"验证code值为1002\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.code).to.eql(1002);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"验证msg值为：p参数非法\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"p参数非法，取值[close,open]\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": " {{nk_token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " {{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}:5000/door?p=start",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "5000",
+					"path": [
+						"door"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "start"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
