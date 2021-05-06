@@ -1,6 +1,6 @@
 ddt==1.4.1
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 Flask-HTTPAuth==4.0.0
 itsdangerous==1.1.0
 PyMySQL==0.8.1
