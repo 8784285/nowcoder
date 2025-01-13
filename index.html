@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="lighton">开灯</button>
+    <script>
+        document.getElementById('lighton').addEventListener('click', function() {
+            sendMqttRequest('on');
+        });
+
+        function sendMqttRequest(msg) {
+            fetch('/send_mqtt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ msg: msg })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('成功:', data);
+            })
+            .catch((error) => {
+                console.error('错误:', error);
+            });
+        }
+    </script>
+
+    <button id="lightoff">关灯</button>
+    <script>
+        document.getElementById('lightoff').addEventListener('click', function() {
+            sendMqttRequest('off');
+        });
+
+        function sendMqttRequest(msg) {
+            fetch('/send_mqtt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ msg: msg })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('成功:', data);
+            })
+            .catch((error) => {
+                console.error('错误:', error);
+            });
+        }
+    </script>
+</body>
+</html>
